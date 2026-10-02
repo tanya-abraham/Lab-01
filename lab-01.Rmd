@@ -279,7 +279,34 @@ _Calculate the percentage change in visitor admissions from 2021 to 2022. Of the
 
 ```{r Ex_n}
 # Write your code here
-
+---
+title: "My Analysis"
+author: "Data Science learner"
+date: "2025-09-20"
+output: html_document
+---
+ 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+ 
+## Data Loading
+ 
+```{r data-load}
+data <- mtcars
+ 
+data %>% 
+  head()
+```
+ 
+## Plotting
+ 
+```{r plot, echo = FALSE}
+data %>% 
+  select(mpg,hp,wt) %>% 
+  plot()
+```
 
 
 ```
